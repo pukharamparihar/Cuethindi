@@ -1,1 +1,26 @@
-
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CUET PG Hindi — Mock Test 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f4fb;color:#181b2c;font-family:"Noto Sans Devanagari",sans-serif}.wrap{max-width:1050px;margin:auto;padding:18px}.top{background:#fff;border-bottom:1px solid #e8e5ef;position:sticky;top:0;z-index:5}.bar{max-width:1050px;margin:auto;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:800}.brand span{color:#7044d4}.timer{background:#17192a;color:#fff;padding:8px 13px;border-radius:10px;font-weight:800}.progress{height:7px;background:#e6e2ed}.progress i{display:block;height:100%;background:#7547d8;width:0}.layout{display:grid;grid-template-columns:1fr 260px;gap:18px;margin-top:20px}.card,.palette{background:#fff;border:1px solid #e7e4ee;border-radius:18px;padding:24px;box-shadow:0 10px 30px #21183b08}.meta{color:#767d8e;font-size:13px;margin-bottom:10px}.q{font-size:21px;font-weight:700;line-height:1.65;margin:10px 0 22px}.option{width:100%;text-align:left;padding:14px 16px;margin:9px 0;border:1px solid #dedbe7;background:#fff;border-radius:12px;font:inherit;cursor:pointer}.option:hover{border-color:#8a62df;background:#faf8ff}.option.selected{border-color:#7547d8;background:#f1ecff}.nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px}.btn{border:0;border-radius:11px;padding:12px 18px;font:inherit;font-weight:800;cursor:pointer}.primary{background:#7547d8;color:white}.secondary{background:#efedf4;color:#36384a}.submit{background:#16a16c;color:#fff;width:100%;margin-top:14px}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}.dot{border:0;background:#eeeaf5;border-radius:9px;padding:9px;cursor:pointer;font-weight:700}.dot.done{background:#dcd0fb}.dot.current{outline:2px solid #7547d8}.legend{font-size:12px;color:#7b8190;margin-top:14px}.result{display:none}.score{font-size:42px;font-weight:800;color:#7547d8}.result h2{margin-top:0}.review{margin-top:18px}.review-item{border-top:1px solid #eceaf0;padding:16px 0}.correct{color:#16875d;font-weight:700}.wrong{color:#d84d58;font-weight:700}.restart{margin-top:18px}.small{font-size:12px;color:#777f90}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#17192a;color:#fff;padding:11px 16px;border-radius:10px;display:none}
+@media(max-width:780px){.layout{grid-template-columns:1fr}.palette{order:-1}.grid{grid-template-columns:repeat(10,1fr)}.q{font-size:18px}.bar{padding:11px 14px}}
+</style></head>
+<body>
+<header class="top"><div class="bar"><div class="brand">CUET PG <span>Hindi</span> • Mock Test 1</div><div class="timer" id="timer">50:00</div></div><div class="progress"><i id="progress"></i></div></header>
+<main class="wrap">
+<div id="exam" class="layout">
+<section class="card"><div class="meta" id="meta"></div><div class="q" id="question"></div><div id="options"></div>
+<div class="nav"><button class="btn secondary" id="prev">← Previous</button><button class="btn primary" id="next">Next →</button></div></section>
+<aside class="palette"><b>Question Palette</b><div class="grid" id="palette"></div><div class="legend">🟣 Attempted &nbsp; • &nbsp; outlined = current</div><button class="btn submit" id="submit">Submit Test</button></aside>
+</div>
+<section id="result" class="card result">
+<h2>Test Result</h2><div class="score" id="score"></div><p id="summary"></p>
+<div class="review" id="review"></div><button class="btn primary restart" onclick="location.reload()">Retake Test</button>
+</section>
+</main><div class="toast" id="toast"></div>
+<script src="questions.js"></script><script src="test.js"></script>
+</body></html>
